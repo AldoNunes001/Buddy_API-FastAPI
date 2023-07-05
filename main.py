@@ -55,6 +55,7 @@ async def chat_endpoint(message: ChatIn) -> ChatOut:
             "https://api.openai.com/v1/chat/completions",
             json=data,
             headers=headers,
+            timeout=30.0,
         )
 
         if response.status_code != 200:
