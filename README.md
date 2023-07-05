@@ -76,22 +76,23 @@ Generates a conversational response using the GPT-3.5-turbo model.
 
 ## Disclaimer
 
-**Aviso Legal do Buddy Bot**
+**Buddy Bot Legal Notice**
 
-O Buddy Bot foi desenvolvido para fornecer uma interface interativa que responde e fornece suporte em situações onde o usuário pode necessitar de companhia para conversar. O Buddy Bot pode oferecer respostas automáticas com a intenção de ajudar a proporcionar algum conforto ou alívio temporário.
+The Buddy Bot was designed to provide an interactive interface that responds and provides support in situations where the user may need company to talk to. The Buddy Bot can offer automatic responses with the intention of helping to provide some comfort or temporary relief.
 
-Por favor, esteja ciente de que:
+Please be aware that:
 
-  1. O Buddy Bot não é um profissional de saúde mental licenciado, nem um conselheiro, psicólogo ou psiquiatra. Ele não fornece conselhos médicos, diagnósticos ou tratamentos.
+  1. The Buddy Bot is not a licensed mental health professional, nor a counselor, psychologist, or psychiatrist. It does not provide medical advice, diagnoses, or treatments.
 
-  2. As respostas fornecidas pelo Buddy Bot não devem ser usadas como um substituto para o aconselhamento profissional. Se você está passando por uma crise ou se você ou outra pessoa estiver em perigo, entre em contato com um profissional de saúde mental, uma autoridade competente, ou ligue para o Centro de Valorização da Vida (CVV) no número 188, que fornece apoio emocional 24/7, ou acesse o site https://www.cvv.org.br/.
+  2. The responses provided by the Buddy Bot should not be used as a substitute for professional advice. If you are going through a crisis or if you or someone else is in danger, please contact a mental health professional, a competent authority, or, in Brazil, call the Lifeline at 188, which provides emotional support 24/7, or visit the website https://www.cvv.org.br/.
 
-  3. O Buddy Bot não tem a capacidade de interpretar situações de crise, emergências médicas ou de saúde mental, ou de fornecer ajuda em tempo real.
+  3. The Buddy Bot does not have the ability to interpret crisis situations, medical or mental health emergencies, or provide real-time assistance.
 
-  4. Todas as interações com o Buddy Bot são baseadas em inteligência artificial, o que significa que as respostas são geradas automaticamente e não são monitoradas por seres humanos em tempo real.
+  4. All interactions with the Buddy Bot are based on artificial intelligence, which means that the responses are automatically generated and are not monitored by humans in real time.
 
-  5. Respeitamos sua privacidade. Todas as conversas com o Buddy Bot são anônimas e não coletamos, armazenamos ou compartilhamos quaisquer dados pessoais do usuário. Nosso objetivo é proporcionar um espaço seguro para você se expressar.
+  5. We respect your privacy. All conversations with the Buddy Bot are anonymous, and we do not collect, store, or share any personal data of the user. Our goal is to provide a safe space for you to express yourself.
 
-Ao utilizar o Buddy Bot, você concorda com este Aviso Legal e compreende que qualquer ação ou decisão tomada com base nas respostas do Buddy Bot é de sua responsabilidade total.
+By using the Buddy Bot, you agree to this Legal Notice and understand that any action or decision made based on the Buddy Bot's responses is entirely your responsibility.
+
 
 
