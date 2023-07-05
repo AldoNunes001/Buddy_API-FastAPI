@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from pydantic import BaseModel
 import httpx
@@ -5,6 +6,7 @@ import os
 
 app = FastAPI()
 
+load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 

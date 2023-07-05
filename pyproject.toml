@@ -10,6 +10,7 @@ packages = [{include = "buddy_api"}]
 python = "^3.11"
 fastapi = {extras = ["all"], version = "^0.99.1"}
 aiohttp = "^3.8.4"
+python-dotenv = "^1.0.0"
 
 
 [build-system]
