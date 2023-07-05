@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from pydantic import BaseModel
 import httpx
@@ -5,27 +6,43 @@ import os
 
 app = FastAPI()
 
+load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
-class Message(BaseModel):
+class ChatOut(BaseModel):
     content: str
 
 
-@app.post("/chat", response_model=Message)
-async def chat_endpoint(message: Message):
+class ChatIn(BaseModel):
+    id: str
+    user_penultimate_message: str
+    buddy_last_message: str
+    user_last_message: str
+
+
+@app.post("/chat", response_model=ChatOut)
+async def chat_endpoint(message: ChatIn) -> ChatOut:
     async with httpx.AsyncClient() as client:
         data = {
             "model": "gpt-3.5-turbo",
             "messages": [
                 {
                     "role": "system",
-                    "content": "Voce é o Buddy, um assistente virtual para dar\
-                        apoio emocional",
+                    "content": "Você é o Buddy, um assistente virtual para \
+                        dar apoio emocional.",
                 },
                 {
                     "role": "user",
-                    "content": message.content,
+                    "content": message.user_penultimate_message,
+                },
+                {
+                    "role": "assistant",
+                    "content": message.buddy_last_message,
+                },
+                {
+                    "role": "user",
+                    "content": message.user_last_message,
                 },
             ],
         }
@@ -40,6 +57,7 @@ async def chat_endpoint(message: Message):
             "https://api.openai.com/v1/chat/completions",
             json=data,
             headers=headers,
+            timeout=30.0,
         )
 
         if response.status_code != 200:
