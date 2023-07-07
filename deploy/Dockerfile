@@ -1,0 +1,27 @@
+# Use an official Python runtime as a parent image
+FROM python:3.11-slim-buster
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# Set work directory
+WORKDIR /code
+
+# System deps:
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        gcc \
+        curl
+
+# Install Python dependencies
+COPY requirements.txt /code/requirements.txt
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+
+# Copy project
+COPY ./main.py /code/
+
+# Command to run the app locally
+# CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+
+# Command to run on Google Cloud
+CMD uvicorn main:app --host 0.0.0.0 --port $PORT

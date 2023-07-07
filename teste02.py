@@ -5,9 +5,11 @@ import random
 import string
 import time
 
+
 def generate_random_string(length=10):
     letters = string.ascii_lowercase
-    return ''.join(random.choice(letters) for _ in range(length))
+    return "".join(random.choice(letters) for _ in range(length))
+
 
 async def make_request(session, url):
     data = {
@@ -19,14 +21,20 @@ async def make_request(session, url):
         print(f"Request took {end_time - start_time} seconds.")
         return await resp.json()  # Supõe-se que a resposta seja um JSON.
 
+
 async def main():
     async with aiohttp.ClientSession() as session:
-        urls = ["http://localhost:8000/chat" for _ in range(10)]  # 1000 requisições para o endpoint do seu chatbot
+        urls = [
+            "http://localhost:8000/chat" for _ in range(10)
+        ]  # 1000 requisições para o endpoint do seu chatbot
         tasks = [make_request(session, url) for url in urls]
         start_time = time.perf_counter()  # Inicia a contagem do tempo total
-        responses = await asyncio.gather(*tasks)  # faz as requisições de forma concorrente
+        responses = await asyncio.gather(
+            *tasks
+        )  # faz as requisições de forma concorrente
         end_time = time.perf_counter()  # Finaliza a contagem do tempo total
         print(responses)  # imprime as respostas
         print(f"Total time taken: {end_time - start_time} seconds.")
+
 
 asyncio.run(main())
